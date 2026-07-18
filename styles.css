@@ -734,7 +734,7 @@ footer { padding: 140px max(7%, calc((100% - var(--content)) / 2)) 45px; backgro
 .contact-details { margin-top: 48px; display: flex; flex-direction: column; align-items: flex-start; gap: 13px; font-size: 13px; }
 .contact-details address { margin-top: 10px; font-style: normal; }
 .contact-form { padding: 45px; background: linear-gradient(145deg, var(--ice), rgba(221,239,247,.65)); }
-.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
 .contact-form label { margin-bottom: 20px; display: block; font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
 .contact-form input, .contact-form textarea {
   width: 100%;
