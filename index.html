@@ -204,8 +204,10 @@
         <input type="hidden" name="_subject" value="New contact request from Runa Advisors website">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
-        <input class="form-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <label>Name<input name="name" autocomplete="name" required></label>
+        <div class="field-row">
+          <label>First Name<input name="firstName" autocomplete="given-name" required></label>
+          <label>Last Name<input name="lastName" autocomplete="family-name" required></label>
+        </div>
         <label>Email<input type="email" name="email" autocomplete="email" required></label>
         <label>Message<textarea name="message" rows="4" required></textarea></label>
         <button class="button button-dark" type="submit">Contact <span aria-hidden="true">→</span></button>
