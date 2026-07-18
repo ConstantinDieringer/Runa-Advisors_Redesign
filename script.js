@@ -47,15 +47,16 @@ if ("IntersectionObserver" in window) {
 }
 
 document.querySelector(".contact-form")?.addEventListener("submit", event => {
-  event.preventDefault();
   const form = event.currentTarget;
   const message = form.querySelector(".form-message");
 
   if (!form.checkValidity()) {
+    event.preventDefault();
     form.reportValidity();
     return;
   }
 
-  message.textContent = "Thank you. We will get in touch with you personally.";
-  form.reset();
+  if (message) {
+    message.textContent = "Sending...";
+  }
 });

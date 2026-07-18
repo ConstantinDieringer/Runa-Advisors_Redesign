@@ -268,16 +268,6 @@ h1, h2, h3 { color: var(--ink); font-weight: 400; }
 }
 .usp-node:hover::after,
 .usp-node:focus-visible::after { opacity: .9; }
-.usp-number {
-  position: relative;
-  z-index: 1;
-  margin-bottom: 24px;
-  color: rgba(255,255,255,.78);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .18em;
-}
-.usp-node:nth-child(1) .usp-number { margin-bottom: 16px; }
 .usp-node strong {
   position: relative;
   z-index: 1;
@@ -492,14 +482,6 @@ h1, h2, h3 { color: var(--ink); font-weight: 400; }
   letter-spacing: .12em;
   text-transform: uppercase;
 }
-.usp-page-kicker {
-  margin-bottom: 24px;
-  color: var(--logo-green);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-}
 .usp-page-hero h1 {
   max-width: 920px;
   margin-bottom: 28px;
@@ -632,7 +614,7 @@ h1, h2, h3 { color: var(--ink); font-weight: 400; }
   background: linear-gradient(105deg, rgba(143,197,221,.32), rgba(221,239,247,.18) 62%, rgba(255,255,255,0));
 }
 .usp-info-card::before {
-  content: counter(uspChapter, decimal-leading-zero);
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -769,6 +751,7 @@ footer { padding: 140px max(7%, calc((100% - var(--content)) / 2)) 45px; backgro
 .contact-form input:focus, .contact-form textarea:focus { border-bottom-color: var(--ink); }
 .contact-form .button { border: 0; }
 .form-message { min-height: 25px; margin: 14px 0 0; font-size: 12px; }
+.form-honey { display: none; }
 .footer-bottom {
   margin-top: 115px;
   padding-top: 25px;
@@ -1173,7 +1156,7 @@ footer { padding: 140px max(7%, calc((100% - var(--content)) / 2)) 45px; backgro
   grid-column: 2;
 }
 .usp-info-card::before {
-  content: counter(uspChapter, decimal-leading-zero);
+  content: "";
   position: absolute;
   left: 0;
   top: 92px;
@@ -1507,9 +1490,6 @@ footer { padding: 140px max(7%, calc((100% - var(--content)) / 2)) 45px; backgro
 .back-link {
   margin-bottom: 78px;
 }
-.usp-page-kicker {
-  margin-bottom: 22px;
-}
 .usp-page-hero h1 {
   max-width: 780px;
   margin-bottom: 34px;
@@ -1583,7 +1563,7 @@ footer { padding: 140px max(7%, calc((100% - var(--content)) / 2)) 45px; backgro
   transform: none;
 }
 .usp-info-card::before {
-  content: counter(uspChapter, decimal-leading-zero);
+  content: "";
   position: static;
   display: block;
   width: auto;
@@ -2260,6 +2240,11 @@ footer { padding: 140px max(7%, calc((100% - var(--content)) / 2)) 45px; backgro
   .usp-page-main .usp-info-card h2 {
     min-height: 0;
   }
+}
+
+.usp-page-main .usp-info-card::before {
+  display: none !important;
+  content: none !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
