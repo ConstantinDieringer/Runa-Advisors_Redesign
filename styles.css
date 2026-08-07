@@ -65,7 +65,7 @@ h1, h2, h3 { color: var(--ink); font-weight: 400; }
   background: url("assets/logo2.png") left center / contain no-repeat;
 }
 .nav { display: flex; align-items: center; gap: 31px; font-size: 13px; }
-.nav a { color: var(--ink); transition: opacity .2s ease; }
+.nav a { color: var(--ink); white-space: nowrap; transition: opacity .2s ease; }
 .nav a:hover { opacity: .55; }
 .dix-link { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
 .dix-link img { width: 16px; height: 16px; object-fit: contain; }
@@ -777,15 +777,15 @@ footer { padding: 140px max(7%, calc((100% - var(--content)) / 2)) 45px; backgro
 
 @media (max-width: 1280px) {
   .section { padding-right: 5%; padding-left: 5%; }
-  .brand-logo { width: 380px; height: 100px; background-size: contain; }
-  .nav { gap: 23px; }
+  .brand-logo { width: 320px; height: 100px; background-size: contain; }
+  .nav { gap: 14px; font-size: 12px; }
   .person { grid-template-columns: 160px 1fr; gap: 22px; }
   .person img { width: 160px; height: 213px; }
 }
 
-@media (min-width: 1041px) and (max-width: 1160px) {
-  .brand-logo { width: 300px; }
-  .nav { gap: 14px; }
+@media (min-width: 1041px) and (max-width: 1180px) {
+  .brand-logo { width: 250px; }
+  .nav { gap: 10px; }
 }
 
 @media (max-width: 1040px) {
